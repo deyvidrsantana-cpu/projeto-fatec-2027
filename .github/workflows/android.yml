@@ -13,10 +13,12 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Baixar projeto
         uses: actions/checkout@v4
+
+      - name: Descompactar projeto
+        run: unzip -o Projeto_Fatec_Android_GitHub.zip -d .
 
       - name: Configurar Java
         uses: actions/setup-java@v4
